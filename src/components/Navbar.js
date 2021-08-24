@@ -1,10 +1,30 @@
 import React from "react"
-import logo from "../assets/images/logo.svg"
-import { FaAlignRight } from "react-icons/fa"
-import pageLinks from "../constants/links"
 import { Link } from "gatsby"
-const Navbar = () => {
-  return <h2>navbar component</h2>
+import { FaAlignRight } from "react-icons/fa"
+
+import logo from "../assets/images/logo.svg"
+import pageLinks from "../constants/links"
+
+const Navbar = ({ toggleSidebar }) => {
+  return (
+    <nav className="navbar">
+      <div className="nav-center">
+        <div className="nav-header">
+          <img src={logo} alt="web dev" />
+          <button type="button" className="toggle-btn" onClick={toggleSidebar}>
+            <FaAlignRight />
+          </button>
+        </div>
+        <div className="nav-links">
+          {pageLinks.map(({ id, text, url }) => (
+            <Link to={url} key={id}>
+              {text}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar

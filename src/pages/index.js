@@ -1,16 +1,55 @@
 import React from "react"
 import { graphql } from "gatsby"
+
 import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Seo from "../components/Seo"
-const IndexPage = () => {
+
+const IndexPage = ({
+  data: {
+    allStrapiProject: { nodes: projects },
+  },
+}) => {
   return (
     <>
-      <h1>Gatsby Strapi Portfolio Starter</h1>
+      <Seo title="Home" />
+      <main>
+        <Hero />
+        <Services />
+        <Jobs />
+        <Projects title="featured projects" projects={projects} showLink />
+      </main>
     </>
   )
 }
+
+export const query = graphql`
+  {
+    allStrapiProject(filter: { featured: { eq: true } }) {
+      nodes {
+        url
+        title
+        slug
+        stack {
+          id
+          title
+        }
+        description
+        github
+        featured
+        id
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
