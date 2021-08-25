@@ -8,6 +8,7 @@
 2. **Strapi** as headless CMS.
 3. **SEO**. 
 4. CSS(including **CSS variables**) and **styled-components**.
+5. Deployment on **Netlify**.
 
 ## Live Demo:
 
