@@ -14,8 +14,15 @@ const Footer = () => {
           ))}
         </div>
         <h4>
-          copyright &copy; {new Date().getFullYear()} <span>WebDev</span> all
-          rights reserved
+          &copy; {new Date().getFullYear()} Asfandyar Jamali. All rights
+          reserved. Built with{" "}
+          <a
+            href="https://www.gatsbyjs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Gatsby
+          </a>
         </h4>
       </div>
     </footer>

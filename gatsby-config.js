@@ -10,7 +10,7 @@ module.exports = {
     title: `WebDev Portfolio`,
     description: `Awesome WebDev Portfolio build with Gatsby and Strapi`,
     titleTemplate: `%s | WebDev Portfolio`,
-    url: `https://asfandyar.jamali.netlify.app`,
+    url: `https://asfandyarjamali.netlify.app`,
     twitterUsername: `@asfandyar038`,
     image: `/main-img.png`,
   },
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://my-portfolio-app-backend.herokuapp.com`,
+        apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`job`, `project`],
         singleTypes: [`about`],

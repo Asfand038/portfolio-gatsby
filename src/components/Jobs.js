@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 const query = graphql`
   {
-    allStrapiJob(sort: { fields: created_at, order: DESC }) {
+    allStrapiJob {
       nodes {
         company
         position

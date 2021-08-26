@@ -27,7 +27,10 @@ const IndexPage = ({
 
 export const query = graphql`
   {
-    allStrapiProject(filter: { featured: { eq: true } }) {
+    allStrapiProject(
+      filter: { featured: { eq: true } }
+      sort: { fields: created_at, order: DESC }
+    ) {
       nodes {
         url
         title

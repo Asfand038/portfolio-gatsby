@@ -1,25 +1,21 @@
 import React from "react"
-import {
-  FaFacebookSquare,
-  FaLinkedin,
-  FaTwitterSquare,
-  FaInstagramSquare,
-} from "react-icons/fa"
+import { FaLinkedin, FaTwitterSquare, FaInstagramSquare } from "react-icons/fa"
+import { SiUpwork } from "react-icons/si"
 
 const data = [
   {
     id: 1,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.linkedin.com/in/asfandyar-jamali-5214b3207/",
+    icon: <SiUpwork className="social-icon"></SiUpwork>,
+    url: "https://www.upwork.com/freelancers/~01d59dd6708520575e?viewMode=1",
   },
   {
     id: 2,
-    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
-    url: "https://twitter.com/asfandyar038",
+    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
+    url: "https://www.linkedin.com/in/asfandyar-jamali/",
   },
   {
     id: 3,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
     url: "https://twitter.com/asfandyar038",
   },
   {
