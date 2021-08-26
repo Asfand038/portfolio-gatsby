@@ -12,4 +12,4 @@
 
 ## Live Demo:
 
-You can test a live version of the application here: https://asfandyar-jamali.netlify.app/
+You can test a live version of the application here: https://asfandyarjamali.netlify.app/
