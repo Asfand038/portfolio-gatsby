@@ -23,7 +23,7 @@ const ProjectsPage = ({
 
 export const query = graphql`
   {
-    allStrapiProject {
+    allStrapiProject(sort: { fields: created_at, order: DESC }) {
       nodes {
         url
         title
