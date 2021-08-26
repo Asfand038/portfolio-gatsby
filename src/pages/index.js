@@ -29,7 +29,7 @@ export const query = graphql`
   {
     allStrapiProject(
       filter: { featured: { eq: true } }
-      sort: { fields: created_at, order: DESC }
+      sort: { fields: createdAt, order: DESC }
     ) {
       nodes {
         url
